@@ -8,6 +8,7 @@ def deploy():
     sudo ("easy_install supervisor")
     sudo ("rm -rf /tmp/cpuload")
     run ("git clone https://github.com/avivl/cpuload.git /tmp/cpuload" )
+    sudo ("supervisord -c /tmp/cpuload/supervisord.conf")
    # run ("python /tmp/cpuload/cpuloader.py")
 
 
